@@ -71,18 +71,20 @@ mainNode.appendChild(divTag);
   // Part 9
 let mouseEvent = document.querySelectorAll(".blog-post");
 let  mouseoutFunc = function() {
-  this.classList.toggle(".purple");
+  this.classList.toggle("purple");
+  // console.log("mouseout event triggered");
 };
 
 const mouseenterFunc = function() {
-  this.classList.toggle(".red");
+  this.classList.toggle("red");
+  // console.log("mouseenter event triggered");
 };
 
 for(let i = 0; i< mouseEvent.length; i++){
-  mouseEvent.addEventListener("mouseout",mouseoutFunc )
+  mouseEvent[i].addEventListener("mouseout",mouseoutFunc )
 }
 for(let i = 0; i< mouseEvent.length; i++){
-  mouseEvent.addEventListener("mouseenter",mouseenterFunc)
+  mouseEvent[i].addEventListener("mouseenter",mouseenterFunc)
 }
 
 });
